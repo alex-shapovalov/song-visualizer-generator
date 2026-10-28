@@ -9,18 +9,18 @@ use tiny_skia::{
 use super::math::{lerp, random_unit, smoothstep};
 use super::palette::{Palette, Rgb};
 use super::timeline::FrameInput;
-use super::{HEIGHT, WIDTH};
+use super::{HEIGHT, SCALE, WIDTH};
 
 const COUNT: u32 = 110;
 const SEED: u32 = 0x00c0_ffee;
 const SPRITE_SIZE: u32 = 64;
-const MIN_RADIUS: f32 = 1.2;
-const MAX_RADIUS: f32 = 4.0;
+const MIN_RADIUS: f32 = 1.2 * SCALE;
+const MAX_RADIUS: f32 = 4.0 * SCALE;
 const GLOW_RATIO: f32 = 5.0;
 const MIN_SPEED: f32 = 0.5;
 const MAX_SPEED: f32 = 1.6;
-const RISE_SPEED: f32 = 22.0;
-const MAX_SWAY: f32 = 28.0;
+const RISE_SPEED: f32 = 22.0 * SCALE;
+const MAX_SWAY: f32 = 28.0 * SCALE;
 const BASE_OPACITY: f32 = 0.35;
 const ENERGY_OPACITY: f32 = 0.45;
 const BEAT_OPACITY: f32 = 0.35;

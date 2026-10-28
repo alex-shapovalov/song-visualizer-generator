@@ -42,7 +42,7 @@ export function App() {
     <main className="page">
       <header className="header">
         <h1>Song Visualizer</h1>
-        <p>Turn a track into a 1080p video, ready to upload to YouTube.</p>
+        <p>Turn a track into a 4K video, ready to upload to YouTube.</p>
       </header>
 
       <section className="card">

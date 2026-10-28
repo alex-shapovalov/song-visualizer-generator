@@ -38,7 +38,7 @@ impl Encoder {
             .arg(audio_path)
             .args(["-map", "0:v:0", "-map", "1:a:0"])
             .args(["-vf", "scale=out_color_matrix=bt709:out_range=tv,format=yuv420p"])
-            .args(["-c:v", "libx264", "-preset", "medium", "-crf", "18", "-profile:v", "high"])
+            .args(["-c:v", "libx264", "-preset", "medium", "-crf", "18", "-profile:v", "high", "-level", "5.1"])
             .args(["-g", &(FPS / 2).to_string(), "-bf", "2"])
             .args(["-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709", "-color_range", "tv"])
             .args(["-c:a", "aac", "-b:a", "320k"])

@@ -30,8 +30,9 @@ use timeline::Timeline;
 pub use encoder::ensure_ffmpeg;
 pub use text::TextRenderer;
 
-pub const WIDTH: u32 = 1920;
-pub const HEIGHT: u32 = 1080;
+pub const WIDTH: u32 = 3840;
+pub const HEIGHT: u32 = 2160;
+pub const SCALE: f32 = 2.0;
 pub const FPS: u32 = 30;
 
 const ANALYSIS_SAMPLE_RATE: u32 = 44_100;

@@ -13,44 +13,44 @@ use super::particles::Particles;
 use super::smoke::Smoke;
 use super::text::{TextRenderer, TextStyle};
 use super::timeline::FrameInput;
-use super::{HEIGHT, WIDTH};
+use super::{HEIGHT, SCALE, WIDTH};
 
 pub const BAR_COUNT: usize = 80;
 
 const PULSE_AMPLITUDE: f32 = 0.05;
 const ART_LAYER_SCALE: f32 = 1.0 + PULSE_AMPLITUDE;
 
-const CONTENT_TOP: f32 = 70.0;
-const CONTENT_BOTTOM: f32 = 790.0;
-const ART_SIZE: f32 = 500.0;
-const ART_CORNER_RADIUS: f32 = 22.0;
-const ART_TITLE_GAP: f32 = 34.0;
+const CONTENT_TOP: f32 = 70.0 * SCALE;
+const CONTENT_BOTTOM: f32 = 790.0 * SCALE;
+const ART_SIZE: f32 = 500.0 * SCALE;
+const ART_CORNER_RADIUS: f32 = 22.0 * SCALE;
+const ART_TITLE_GAP: f32 = 34.0 * SCALE;
 const TITLE_ARTIST_GAP: i32 = 0;
-const MAX_TEXT_WIDTH: f32 = 1400.0;
-const TITLE_SIZE: f32 = 60.0;
-const TITLE_MIN_SIZE: f32 = 36.0;
-const ARTIST_SIZE: f32 = 36.0;
-const ARTIST_MIN_SIZE: f32 = 26.0;
+const MAX_TEXT_WIDTH: f32 = 1400.0 * SCALE;
+const TITLE_SIZE: f32 = 60.0 * SCALE;
+const TITLE_MIN_SIZE: f32 = 36.0 * SCALE;
+const ARTIST_SIZE: f32 = 36.0 * SCALE;
+const ARTIST_MIN_SIZE: f32 = 26.0 * SCALE;
 
-const GLOW_SIGMA: f32 = 60.0;
+const GLOW_SIGMA: f32 = 60.0 * SCALE;
 const GLOW_OPACITY: f32 = 0.45;
-const SHADOW_SIGMA: f32 = 22.0;
+const SHADOW_SIGMA: f32 = 22.0 * SCALE;
 const SHADOW_OPACITY: f32 = 0.55;
-const SHADOW_OFFSET: f32 = 16.0;
-const TEXT_SHADOW_SIGMA: f32 = 8.0;
+const SHADOW_OFFSET: f32 = 16.0 * SCALE;
+const TEXT_SHADOW_SIGMA: f32 = 8.0 * SCALE;
 const TEXT_SHADOW_OPACITY: f32 = 0.5;
-const TEXT_SHADOW_OFFSET: i32 = 3;
+const TEXT_SHADOW_OFFSET: i32 = (3.0 * SCALE) as i32;
 
-const SPECTRUM_MARGIN: f32 = 160.0;
-const SPECTRUM_BASELINE: f32 = 985.0;
-const BAR_MAX_HEIGHT: f32 = 170.0;
+const SPECTRUM_MARGIN: f32 = 160.0 * SCALE;
+const SPECTRUM_BASELINE: f32 = 985.0 * SCALE;
+const BAR_MAX_HEIGHT: f32 = 170.0 * SCALE;
 const BAR_FILL_RATIO: f32 = 0.6;
 const REFLECTION_SCALE: f32 = 0.35;
-const REFLECTION_GAP: f32 = 6.0;
+const REFLECTION_GAP: f32 = 6.0 * SCALE;
 const REFLECTION_OPACITY: f32 = 0.28;
 
-const BACKGROUND_SAMPLE_WIDTH: u32 = 480;
-const BACKGROUND_BLUR_SIGMA: f32 = 10.0;
+const BACKGROUND_SAMPLE_WIDTH: u32 = (480.0 * SCALE) as u32;
+const BACKGROUND_BLUR_SIGMA: f32 = 10.0 * SCALE;
 const BACKGROUND_DIM: f32 = 0.45;
 const VIGNETTE_OPACITY: f32 = 0.6;
 const BOTTOM_FADE_START: f32 = 0.55;
