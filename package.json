@@ -1,0 +1,12 @@
+{
+  "name": "song-visualizer-generator",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "setup": "npm install && npm --prefix web install",
+    "dev": "concurrently --kill-others --names server,web --prefix-colors magenta,cyan \"cargo run --release --manifest-path server/Cargo.toml\" \"npm --prefix web run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
